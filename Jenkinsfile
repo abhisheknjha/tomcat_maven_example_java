@@ -15,5 +15,14 @@ pipeline {
 	}
 	}
 	}
+
+
+stage ('Deploy build in staging area') {
+	steps {
+	build job : 'deploy-agingpipeline'
+	}
+}
+
+
 	}
 }
